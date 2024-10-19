@@ -14,9 +14,9 @@ class HeaderSection extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Column(
+          const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children: [
               Text(
                 "Welcome,",
                 style: TextStyle(
@@ -36,11 +36,17 @@ class HeaderSection extends StatelessWidget {
             ],
           ),
           CircleAvatar(
-            child: Image.asset(
-              'assets/images/avatar.png',
-              fit: BoxFit.cover,
+            radius: 25, // Ajout d'un rayon pour l'avatar
+            backgroundColor: Colors.transparent, // Suppression du background
+            child: ClipOval( // Clip pour s'assurer que l'image est ronde
+              child: Image.asset(
+                'assets/images/avatar.png',
+                fit: BoxFit.cover,
+                width: 50, // Taille définie pour l'avatar
+                height: 50,
+              ),
             ),
-          )
+          ),
         ],
       ),
     );

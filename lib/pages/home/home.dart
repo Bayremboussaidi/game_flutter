@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:proj/pages/home/widgets/header.dart';
+import 'package:proj/pages/detail/widgets/header.dart';
 import 'package:proj/pages/home/widgets/search.dart';
 import 'package:proj/pages/home/widgets/category.dart';
 

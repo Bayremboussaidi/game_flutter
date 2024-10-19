@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:proj/pages/home/home.dart'; // Correct import
 
 void main() {
   runApp(const MyApp());
@@ -17,16 +18,11 @@ class MyApp extends StatelessWidget {
         const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
       );
     }
-    
-    return MaterialApp(
+
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Gamestore',
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 10, 194, 38),
-          title: Text('mon titre'),
-        ),
-      ),
+      home: Home(), // Ensure this matches the class name in home.dart
     );
   }
 }
